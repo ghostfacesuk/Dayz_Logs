@@ -96,5 +96,10 @@ namespace DayZ_Log
         {
             // Optional: Any additional initialization code for the form can go here
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
