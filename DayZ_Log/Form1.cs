@@ -193,7 +193,11 @@ namespace DayZ_Log
             string user_profile = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             string log_directory = Path.Combine(user_profile, "AppData", "Local", "DayZ");
 
+            // Delete files
             DeleteFilesWithExtensions(log_directory, "*.log", "*.mdmp", "*.RPT");
+
+            // Show updated file information
+            ShowDayZFolderInfo(log_directory);
 
             MessageBox.Show("Log files deleted successfully.");
         }
