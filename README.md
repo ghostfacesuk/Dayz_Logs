@@ -5,7 +5,7 @@
 - Admin privileges on account (extracts data from Dayz folder in AppData)
 
 ## Download
-[Release 1.0.2.Zip file](https://github.com/ghostfacesuk/Dayz_Logs/blob/main/DayZ_Log/bin/Release/net6.0-windows/DayZ%20Crash%20Report%20App%201.0.2.zip)
+[Release 1.0.3.Zip file](https://github.com/ghostfacesuk/Dayz_Logs/blob/main/DayZ_Log/bin/Release/net6.0-windows/DayZ%20Crash%20Report%20App%201.0.3.zip)
 
 ## Usage 
 - Download zip file and extract to PC (Windows only)
