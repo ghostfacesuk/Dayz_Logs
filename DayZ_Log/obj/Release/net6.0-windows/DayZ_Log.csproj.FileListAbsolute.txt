@@ -1,0 +1,17 @@
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\bin\Release\net6.0-windows\DayZ_Log.exe
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\bin\Release\net6.0-windows\DayZ_Log.deps.json
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\bin\Release\net6.0-windows\DayZ_Log.runtimeconfig.json
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\bin\Release\net6.0-windows\DayZ_Log.dll
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\bin\Release\net6.0-windows\DayZ_Log.pdb
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\obj\Release\net6.0-windows\DayZ_Log.csproj.AssemblyReference.cache
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\obj\Release\net6.0-windows\DayZ_Log.MainForm.resources
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\obj\Release\net6.0-windows\DayZ_Log.csproj.GenerateResource.cache
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\obj\Release\net6.0-windows\DayZ_Log.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\obj\Release\net6.0-windows\DayZ_Log.AssemblyInfoInputs.cache
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\obj\Release\net6.0-windows\DayZ_Log.AssemblyInfo.cs
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\obj\Release\net6.0-windows\DayZ_Log.csproj.CoreCompileInputs.cache
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\obj\Release\net6.0-windows\DayZ_Log.dll
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\obj\Release\net6.0-windows\refint\DayZ_Log.dll
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\obj\Release\net6.0-windows\DayZ_Log.pdb
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\obj\Release\net6.0-windows\DayZ_Log.genruntimeconfig.cache
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\obj\Release\net6.0-windows\ref\DayZ_Log.dll

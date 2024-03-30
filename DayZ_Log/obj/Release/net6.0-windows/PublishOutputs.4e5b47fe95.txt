@@ -1,0 +1,5 @@
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\bin\Release\net6.0-windows\publish\DayZ_Log.exe
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\bin\Release\net6.0-windows\publish\DayZ_Log.dll
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\bin\Release\net6.0-windows\publish\DayZ_Log.deps.json
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\bin\Release\net6.0-windows\publish\DayZ_Log.runtimeconfig.json
+C:\Users\ssgho\source\repos\DayZ_Log\DayZ_Log\bin\Release\net6.0-windows\publish\DayZ_Log.pdb
