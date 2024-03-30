@@ -105,23 +105,28 @@ namespace DayZ_Log
 
         private void ProcessCrashLogFile(string filePath, StreamWriter outputFile)
         {
-            bool captureContent = true; // Start capturing content immediately
+            bool skipLine = false; // Flag to skip the line starting with "CLI params:"
             foreach (string line in File.ReadLines(filePath, Encoding.UTF8))
             {
-                // Stop capturing content when reaching "Runtime mode"
-                if (line.StartsWith("Runtime mode"))
+                // Skip the line starting with "CLI params:"
+                if (line.StartsWith("CLI params:"))
                 {
-                    break;
+                    skipLine = true;
+                    continue;
                 }
 
                 // Write the captured content to the output file
-                if (captureContent)
+                if (!skipLine)
                 {
                     outputFile.WriteLine(line.Trim());
                 }
+                else
+                {
+                    // Reset the flag after skipping the line
+                    skipLine = false;
+                }
             }
         }
-
 
         // To display information about logs THIS NEEDS USING!
         private void label4_Click(object sender, EventArgs e)
