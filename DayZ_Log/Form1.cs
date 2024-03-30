@@ -135,7 +135,30 @@ namespace DayZ_Log
         // Delete files button
         private void button1_Click(object sender, EventArgs e)
         {
+            string user_profile = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            string log_directory = Path.Combine(user_profile, "AppData", "Local", "DayZ");
 
+            DeleteFilesWithExtensions(log_directory, "*.log", "*.mdmp", "*.RPT");
+
+            MessageBox.Show("Log files deleted successfully.");
+        }
+
+        private void DeleteFilesWithExtensions(string directory, params string[] extensions)
+        {
+            foreach (string extension in extensions)
+            {
+                foreach (string file in Directory.GetFiles(directory, extension))
+                {
+                    try
+                    {
+                        File.Delete(file);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error deleting file {file}: {ex.Message}");
+                    }
+                }
+            }
         }
 
         // Label for File Scan
