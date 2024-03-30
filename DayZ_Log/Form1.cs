@@ -131,5 +131,23 @@ namespace DayZ_Log
         {
 
         }
+
+        // Delete files button
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Label for File Scan
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Label for Delete log files
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
