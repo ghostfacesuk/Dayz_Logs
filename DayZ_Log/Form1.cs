@@ -62,24 +62,22 @@ namespace DayZ_Log
 
         private void ProcessLogFiles(List<(string, DateTime)> logFiles, string outputFilePath)
         {
-            string errorPattern = @"\[ERROR\]";
-
             using (StreamWriter outputFile = new StreamWriter(outputFilePath, false, Encoding.UTF8))
             {
                 foreach ((string filePath, DateTime creationDate) in logFiles)
                 {
                     try
                     {
-                        string[] fileLines = File.ReadAllLines(filePath, Encoding.UTF8);
                         string formattedDate = creationDate.ToString("yyyy-MM-dd HH:mm:ss");
                         outputFile.WriteLine($"File: {filePath} (Created: {formattedDate})");
 
-                        foreach (string line in fileLines)
+                        if (Path.GetFileName(filePath).StartsWith("crash_"))
                         {
-                            if (Regex.IsMatch(line, errorPattern))
-                            {
-                                outputFile.WriteLine(line.Trim());
-                            }
+                            ProcessCrashLogFile(filePath, outputFile);
+                        }
+                        else
+                        {
+                            ProcessRegularLogFile(filePath, outputFile);
                         }
 
                         outputFile.WriteLine(new string('-', 80));
@@ -88,6 +86,38 @@ namespace DayZ_Log
                     {
                         Console.WriteLine($"Error processing file {filePath}: {ex.Message}");
                     }
+                }
+            }
+        }
+
+        private void ProcessRegularLogFile(string filePath, StreamWriter outputFile)
+        {
+            string errorPattern = @"\[ERROR\]";
+
+            foreach (string line in File.ReadLines(filePath, Encoding.UTF8))
+            {
+                if (Regex.IsMatch(line, errorPattern))
+                {
+                    outputFile.WriteLine(line.Trim());
+                }
+            }
+        }
+
+        private void ProcessCrashLogFile(string filePath, StreamWriter outputFile)
+        {
+            bool captureContent = true; // Start capturing content immediately
+            foreach (string line in File.ReadLines(filePath, Encoding.UTF8))
+            {
+                // Stop capturing content when reaching "Runtime mode"
+                if (line.StartsWith("Runtime mode"))
+                {
+                    break;
+                }
+
+                // Write the captured content to the output file
+                if (captureContent)
+                {
+                    outputFile.WriteLine(line.Trim());
                 }
             }
         }
