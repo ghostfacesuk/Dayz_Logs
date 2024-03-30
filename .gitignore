@@ -1,6 +1,6 @@
-/DayZ_Log/bin
+/DayZ_Log/bin/Debug
 /DayZ_Log/obj/Debug
 /.vs/DayZ_Log
 /.vs
-.vs/
+**/.vs
 
