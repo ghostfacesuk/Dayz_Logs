@@ -1,4 +1,4 @@
-# DayZ Crash report App
+# DayZ Crash Report App
 
 ## Requirements
 - .Net 6 
