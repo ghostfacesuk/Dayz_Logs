@@ -122,12 +122,124 @@ namespace DayZ_Log
             }
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+
+        // To display information about logs THIS NEEDS USING!
+        private void label4_Click(object sender, EventArgs e)
         {
-            // Optional: Any additional initialization code for the form can go here
+
         }
 
+        // Main form with info about log files and directory status
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            string user_profile = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            string dayz_directory = Path.Combine(user_profile, "AppData", "Local", "DayZ");
+
+            if (Directory.Exists(dayz_directory))
+            {
+                ShowDayZFolderInfo(dayz_directory);
+            }
+            else
+            {
+                MessageBox.Show("DayZ folder not found.");
+            }
+        }
+
+        private void ShowDayZFolderInfo(string directory)
+        {
+            string[] extensions = new string[] { "*.log", "*.mdmp", "*.RPT" };
+
+            int totalFiles = 0;
+            long totalSize = 0;
+
+            foreach (string extension in extensions)
+            {
+                foreach (string file in Directory.GetFiles(directory, extension))
+                {
+                    FileInfo fileInfo = new FileInfo(file);
+                    totalFiles++;
+                    totalSize += fileInfo.Length;
+                }
+            }
+
+            label4.Text = $"Number of log files: {totalFiles}\n";
+            label4.Text += $"Total size of log files: {FormatBytes(totalSize)}";
+        }
+
+        private string FormatBytes(long bytes)
+        {
+            string[] suffixes = { "B", "KB", "MB", "GB", "TB" };
+            int suffixIndex = 0;
+            double byteCount = bytes;
+
+            while (byteCount >= 1024 && suffixIndex < suffixes.Length - 1)
+            {
+                byteCount /= 1024;
+                suffixIndex++;
+            }
+
+            return $"{byteCount:n1} {suffixes[suffixIndex]}";
+        }
+
+        // Info label including version
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Delete files button
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string user_profile = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            string log_directory = Path.Combine(user_profile, "AppData", "Local", "DayZ");
+
+            DeleteFilesWithExtensions(log_directory, "*.log", "*.mdmp", "*.RPT");
+
+            MessageBox.Show("Log files deleted successfully.");
+        }
+
+        private void DeleteFilesWithExtensions(string directory, params string[] extensions)
+        {
+            foreach (string extension in extensions)
+            {
+                foreach (string file in Directory.GetFiles(directory, extension))
+                {
+                    try
+                    {
+                        File.Delete(file);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error deleting file {file}: {ex.Message}");
+                    }
+                }
+            }
+        }
+
+        // Label for File Scan
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Label for Delete log files
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Title for log info
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
