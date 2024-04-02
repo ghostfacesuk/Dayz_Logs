@@ -1,4 +1,5 @@
 # DayZ Crash Report App
+![DayZ Crash Report](https://github.com/ghostfacesuk/Dayz_Logs/blob/main/UI.jpg)
 
 ## Requirements
 - .Net 8 
