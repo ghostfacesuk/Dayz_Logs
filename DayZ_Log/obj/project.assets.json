@@ -1,38 +1,38 @@
 {
   "version": 3,
   "targets": {
-    "net6.0-windows7.0": {}
+    "net8.0-windows7.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net6.0-windows7.0": []
+    "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ssgho\\.nuget\\packages\\": {}
+    "C:\\Users\\Stephen Griffiths\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ssgho\\source\\repos\\DayZ_Log\\DayZ_Log\\DayZ_Log.csproj",
+      "projectUniqueName": "C:\\Users\\Stephen Griffiths\\source\\repos\\Dayz_Logs\\DayZ_Log\\DayZ_Log.csproj",
       "projectName": "DayZ_Log",
-      "projectPath": "C:\\Users\\ssgho\\source\\repos\\DayZ_Log\\DayZ_Log\\DayZ_Log.csproj",
-      "packagesPath": "C:\\Users\\ssgho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ssgho\\source\\repos\\DayZ_Log\\DayZ_Log\\obj\\",
+      "projectPath": "C:\\Users\\Stephen Griffiths\\source\\repos\\Dayz_Logs\\DayZ_Log\\DayZ_Log.csproj",
+      "packagesPath": "C:\\Users\\Stephen Griffiths\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Stephen Griffiths\\source\\repos\\Dayz_Logs\\DayZ_Log\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ssgho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Stephen Griffiths\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows"
+        "net8.0-windows7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows7.0",
           "projectReferences": {}
         }
       },
@@ -43,8 +43,8 @@
       }
     },
     "frameworks": {
-      "net6.0-windows7.0": {
-        "targetAlias": "net6.0-windows",
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows7.0",
         "imports": [
           "net461",
           "net462",
@@ -64,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
